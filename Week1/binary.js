@@ -11,10 +11,10 @@ function binarysearch(arr,target){
             rightIndex=middleindex-1
         }
         else{
-            leftIndex=middleindex-1
+            leftIndex=middleindex+1
         }
     }
-    return -1
+    return leftIndex
 
 }
 console.log(binarysearch([-5,2,4,6,10],6))
