@@ -1,0 +1,25 @@
+check if two strings are equivalent
+function arrayStringsAreEqual(word1, word2) {
+  if (word1.length !== word2.length) {
+    return false; // Different number of elements, not equal
+  }
+
+  for (let i = 0; i < word1.length; i++) {
+    if (word1[i].length !== word2[i].length) {
+      return false; // Different length of strings in the same index, not equal
+    }
+
+    for (let j = 0; j < word1[i].length; j++) {
+      if (word1[i][j] !== word2[i][j]) {
+        return false; // Different characters at the same position, not equal
+      }
+    }
+  }
+
+  return true; // All elements are equal
+}
+
+// Example usage:
+const wordArray1 = ["ab", "c"];
+const wordArray2 = ["a", "bc"];
+console.log(arrayStringsAreEqual(wordArray1, wordArray2)); // Output: true
