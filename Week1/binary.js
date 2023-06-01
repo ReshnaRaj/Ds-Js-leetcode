@@ -2,7 +2,7 @@ function binarysearch(arr,target){
     let leftIndex=0;
     let rightIndex=arr.length-1
     while(leftIndex<=rightIndex){
-        let middleindex=leftIndex+rightIndex/2
+        let middleindex=Math.floor((leftIndex+rightIndex)/2)
         if(target==arr[middleindex])
         {
             return middleindex
@@ -11,7 +11,7 @@ function binarysearch(arr,target){
             rightIndex=middleindex-1
         }
         else{
-            leftIndex=middleindex-1
+            leftIndex=middleindex+1
         }
     }
     return leftIndex
