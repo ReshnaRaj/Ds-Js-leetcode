@@ -21,3 +21,31 @@ for (let i = 0; i < array.length; i++) {
 }
 
 console.log(rearrangedArray);
+
+
+
+
+
+
+
+// Normal  method
+--------------------------
+  var resultArray = [];
+var length = array.length;
+
+// inserting all zeros
+for(i=0;i<length;i++){
+    if(array[i] === 0){
+        resultArray[resultArray.length] = array[i];
+    }
+}
+
+/// inserting other numbers
+for(i=0;i<length;i++){
+    if(array[i] !== 0){
+        resultArray[resultArray.length] = array[i]
+    }
+}
+
+
+console.log(resultArray)
