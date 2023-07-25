@@ -1,6 +1,6 @@
 function merge(arr){
     const len=arr.length
-    if(arr.length<2){
+    if(len<2){
         return arr
     }
     const mid=Math.floor(len/2)
