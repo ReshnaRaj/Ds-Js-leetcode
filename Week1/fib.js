@@ -12,3 +12,19 @@ for (let i = 1; i <= number; i++) {
     n1 = n2;
     n2 = nextTerm;
 }
+
+ // function...
+ 
+let n1 = 0, n2 = 1, nextTerm;
+
+console.log('Fibonacci Series:');
+function fib(number){
+for (let i = 1; i <= number; i++) {
+    console.log(n1);
+    nextTerm = n1 + n2;
+    n1 = n2;
+    n2 = nextTerm;
+}
+return n1
+}
+console.log(fib(4))
