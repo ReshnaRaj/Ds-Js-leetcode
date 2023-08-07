@@ -3,9 +3,9 @@ const searchValue = 5;
 
 const index = arr.indexOf(searchValue);
 
-if (index !== -1) {
+if (index == -1) {
 //   console.log(`The index of ${searchValue} is ${index}`);
-console.log(`${searchValue} element is found`);
+console.log(`${searchValue} element not  is found`);
 } else {
-  console.log(`${searchValue} not found in array`);
+  console.log(`${searchValue}  found in array`);
 }
