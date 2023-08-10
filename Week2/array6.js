@@ -10,3 +10,4 @@ function uniqueArray(number){
     return unique
 }
 console.log(uniqueArray([4,5,2,1,2,4,9]));
+// while doing in programiz gt an error
