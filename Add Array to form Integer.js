@@ -1,4 +1,4 @@
-Given num, the array-form of an integer, and an integer k, return the array-form of the integer num + k.
+// Given num, the array-form of an integer, and an integer k, return the array-form of the integer num + k.
 
 
 function addToArrayForm(num, k) {

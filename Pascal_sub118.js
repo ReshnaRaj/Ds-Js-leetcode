@@ -1,5 +1,5 @@
-common method
---------------------------------
+// common method
+// --------------------------------
 function pascal(number) {
   const array = [];
 
@@ -20,5 +20,4 @@ function pascal(number) {
 console.log(pascal(5));
 
 
-11 multiplication
---------------------------------
+ 
