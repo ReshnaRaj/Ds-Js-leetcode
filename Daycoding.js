@@ -1,5 +1,5 @@
-check if two strings are equivalent
--------------------------------------------
+// check if two strings are equivalent
+// -------------------------------------------
 var arrayStringsAreEqual = function(word1, word2) {
   let str1, str2;
 	let len = Math.max(word1.length, word2.length);
@@ -19,8 +19,8 @@ let word2=['a','bc']
 console.log(arrayStringsAreEqual(word1,word2))
 
 
-Another method
-----------------------------------------------------
+// Another method
+// ----------------------------------------------------
 
 
 function areStringsEquivalent(word1, word2) {
