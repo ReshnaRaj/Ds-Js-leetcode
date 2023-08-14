@@ -10,7 +10,7 @@ var mergeAlternately = function(word1, word2) {
   if (word1.length > word2.length) {
      
     mergedString += word1.slice(minLen);
-    console.log(mergedString,"yadhu")
+    console.log(mergedString)
     
   } else if (word2.length > word1.length) {
     mergedString += word2.slice(minLen);
