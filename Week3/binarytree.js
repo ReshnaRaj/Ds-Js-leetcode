@@ -137,6 +137,35 @@ deleteNode(root,value){
     }
     return root
 }
+     valid() {
+    let value = [];
+    this.Inorder(this.root, value);
+    for (let i = 0; i < value.length; i++) {
+      if (value[i] <= value[i - 1]) {
+        return false;
+      }
+    }
+    return true;
+  }
+    findSecondLargest() {
+    if (!this.root) {
+      console.log("The tree is empty");
+      return null;
+    }
+
+    let current = this.root;
+    let secondLargest = null;
+
+    while (current.right) {
+      if (!current.right.right && !current.right.left) {
+        secondLargest = current.value;
+        break;
+      }
+      current = current.right;
+    }
+
+    return secondLargest;
+  }
 
 
 }
@@ -165,3 +194,5 @@ bst.preorder(bst.root)
 // bst.delete(7)
 // console.log('after deleting ');
 // bst.levelOrder()
+console.log("second largest element",bst.findSecondLargest())
+console.log("Is the tree a valid BST?", bst.valid());
