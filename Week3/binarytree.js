@@ -41,6 +41,19 @@ insertnode(root,newnode){
     
 
 }
+    findSum() {
+    let sum = 0;
+
+    function Inorder(root) {
+      if (!root) return;
+      Inorder(root.left);
+      sum += root.value; // Add the current node's value to the sum
+      Inorder(root.right);
+    }
+
+    Inorder(this.root);
+    return sum;
+  }
 search(root,value){
     if(!root){
         return false
@@ -196,3 +209,5 @@ bst.preorder(bst.root)
 // bst.levelOrder()
 console.log("second largest element",bst.findSecondLargest())
 console.log("Is the tree a valid BST?", bst.valid());
+const sum = bst.findSum();
+console.log("Sum of elements:", sum);
