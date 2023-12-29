@@ -12,3 +12,4 @@ const removeDuplicates = function(nums) {
     const nums = [1, 1, 2,3, 4,5, 5, 6];
     console.log(removeDuplicates(nums)); // Output: 6
     // console.log(nums);
+// this is not working properly
