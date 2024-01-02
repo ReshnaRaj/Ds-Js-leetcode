@@ -23,3 +23,15 @@ var getCommon = function(nums1, nums2) {
   return lowestValue;
 }
 console.log(getCommon([1,2,3],[2,4]))
+
+
+leetcode solution
+------------------
+var getCommon = function(nums1, nums2) {
+  const set = new Set(nums1);
+  for (const n of nums2) {
+    if (set.has(n)) return n;
+  }
+  return -1;
+}
+  
