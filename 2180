@@ -1,0 +1,20 @@
+ Count Integers With Even Digit Sum
+-------------------------------------------------
+var countEven = function(num) {
+    let count = 0;
+    for (let i = 1; i <= num; i++) {
+        let digitSum = 0;
+        let temp = i;
+        while (temp > 0) {
+            digitSum += temp % 10; // Add the last digit to the sum
+            temp = Math.floor(temp / 10); // Remove the last digit
+        }
+        if (digitSum % 2 === 0) {
+            count++;
+        }
+    }
+    return count;
+};
+
+// Test with num = 4
+console.log(countEven(4)); // Output: 2
