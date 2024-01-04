@@ -1,0 +1,18 @@
+var findTheArrayConcVal = function (nums) {
+  let result = 0;
+  while (nums.length > 1) {
+    let first = nums.shift().toString();
+     
+    let last = nums.pop().toString();
+ 
+    result += parseInt(first + last);
+ 
+    console.log(nums, "array");
+  }
+  if (nums.length === 1) {
+    console.log(result)
+    result += parseInt(nums[0].toString()); // Add the remaining element if any
+  }
+  return result;
+};
+console.log(findTheArrayConcVal([5, 14, 13, 8, 12]));
