@@ -33,3 +33,28 @@ Input: nums = [1,100]
 Output: 1
 Explanation:
 There is only one average to be calculated after removing 1 and 100, so we return 1.
+
+
+
+
+
+
+Test case passed code 
+------------------------------------------------
+
+var distinctAverages = function(nums) {
+    nums.sort((a, b) => a - b); // Sort the array
+
+    const n = nums.length;
+    const averages = new Set();
+
+    for (let i = 0; i < n / 2; i++) {
+        let min = nums[i];
+        let max = nums[n - 1 - i];
+
+        let average = (min + max) / 2;
+        averages.add(average);
+    }
+
+    return averages.size;
+};
