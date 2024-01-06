@@ -53,22 +53,5 @@ function findDuplicate(array){
 }
 console.log(findDuplicate([4,5,6,4]))
 // return the duplicate elements from the array
-function findDuplicate(array){
  
-    let duplicates=[]
-    
-    for(let i=0;i<array.length;i++){
-        
-        for(let j=i+1;j<array.length;j++){
-            if(array[i]==array[j]){
-                
-                duplicates.push(array[i])
-            }
-        }
-         
-    }
-     
-    return duplicates
-}
-console.log(findDuplicate([ 4,5,6,4,9]))
 
