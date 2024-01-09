@@ -53,5 +53,25 @@ function findDuplicate(array){
 }
 console.log(findDuplicate([4,5,6,4]))
 // return the duplicate elements from the array
+// write a function to remove the duplicate elements
+function UniqueElement(array) {
+    let result = [];
+    for (let i = 0; i < array.length; i++) {
+        let isUnique = true;
+        for (let j = 0; j < result.length; j++) {
+            if (array[i] === result[j]) {
+                isUnique = false;
+                break; // No need to continue checking if not unique
+            }
+        }
+        if (isUnique) {
+            result.push(array[i]);
+        }
+    }
+    return result;
+}
+
+console.log(UniqueElement([45, 6, 7, 8, 1, 6])); // Output: [45, 6, 7, 8, 1]
+
  
 
