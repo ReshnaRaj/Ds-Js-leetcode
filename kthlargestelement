@@ -89,4 +89,31 @@ var maxProduct = function(nums) {
     return product
     
 };
+You are given an integer array nums. Let product be the product of all values in the array nums.
+
+Return signFunc(product).
+-------------------------------------------------------------------------------------------------------------------
+
+var arraySign = function(nums) {
+    let hasZero = false;
+
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] === 0) {
+            hasZero = true;
+            break;
+        }
+    }
+
+    if (hasZero) {
+        return 0;
+    }
+    const product = nums.reduce((acc, num) => acc * num, 1);
+    console.log(product)
+    return product > 0 ? 1 : -1;
+};
+
+// Example usage:
+console.log(arraySign([-1, -2, -3, -4, 3, 2, 1]));  // Output: 1
+console.log(arraySign([1, 5, 0, 2, -3]));          // Output: 0
+console.log(arraySign([-1, 1, -1, 1, -1]));    
 
