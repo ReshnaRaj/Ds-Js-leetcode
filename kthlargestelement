@@ -9,3 +9,30 @@ function nthlargest(array,n){
     }
 }
 console.log("fourth largest elements from the array",nthlargest([5,6,3,2,12],4))
+
+
+
+Given an integer array nums, return the third distinct maximum number in this array.
+If the third maximum does not exist, return the maximum number.
+--------------------------------------------------------------------------------------------
+ var thirdMax = function (nums) 
+ {
+ 
+        let sort = nums.sort((a, b) => b - a)
+        console.log(sort,"sorted")
+        let arr = []
+        let k = 0
+        for (let i = 0; i < nums.length; i++) {
+            if (arr.indexOf(sort[i]) == -1 && sort[i] != undefined) {
+                console.log("this")
+                arr.push(sort[i])
+                console.log(arr,"pushed...")
+                k++
+            }
+            if (k == 3)  break
+        }
+        if (arr.length == 1 || arr.length == 2) return arr[0]
+        return arr[arr.length - 1]
+    };
+    
+    console.log(thirdMax([1,2,3]))
