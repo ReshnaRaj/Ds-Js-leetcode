@@ -66,3 +66,27 @@ var findNonMinOrMax = function(nums) {
 console.log(findNonMinOrMax([3, 2, 1, 4])); // Output: 2
 console.log(findNonMinOrMax([1, 2]));        // Output: -1
 
+Given the array of integers nums, you will choose two different indices i and j of that array. 
+Return the maximum value of (nums[i]-1)*(nums[j]-1)
+----------------------------------------------------------------------------------------------------------
+
+
+var maxProduct = function(nums) {
+     let product
+    if(nums.length==2){
+        product=(nums[0]-1)*(nums[1]-1)
+        
+        
+        
+    }
+   
+    const sorted=nums.sort((a,b)=>b-a)
+    const max1=sorted[0]
+    const max2=sorted[1]
+    for(let i=1;i<sorted.length-1;i++){
+        product=(max1-1)*(max2-1)
+    }
+    return product
+    
+};
+
