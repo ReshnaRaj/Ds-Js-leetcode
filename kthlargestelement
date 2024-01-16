@@ -1,0 +1,12 @@
+find the nthlargest element from the array(not optimized way to find the nthlargest element from the array)
+----------------------------------------------------------
+function nthlargest(array,n){
+    const sorted=array.sort((a,b)=>(a-b))
+    const reverse=sorted.reverse()
+    for(let i=0;i<reverse.length;i++){
+        if(i==n){
+            return reverse[i-1]
+        }
+    }
+}
+console.log("fourth largest elements from the array",nthlargest([5,6,3,2,12],4))
