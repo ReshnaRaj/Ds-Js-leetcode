@@ -11,7 +11,7 @@ function insertionSort(arr) {
             console.log(arr[j+1],"j+1 value")
             j = j - 1;
             // decremented is for comparing with sorted array
-            // inside the while second condition means comparing the sorted array with the unsorted array
+            // inside the while second condition means comparing teh sorted array with the unsorted array
         }
         arr[j + 1] = key;
         

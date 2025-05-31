@@ -1,0 +1,14 @@
+var isPalindrome = function(s) {
+    const modifiedString = s.toLowerCase().replace(/[^a-z0-9]/g, '');
+    let strings=modifiedString.split('').reverse().join('')
+    if(modifiedString==strings || modifiedString==""){
+        return true
+    }
+    else{
+        return false
+    }
+    
+};
+
+console.log(isPalindrome("A man, a plan, a canal: Panama"));
+ 

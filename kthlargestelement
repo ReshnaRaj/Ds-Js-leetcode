@@ -1,0 +1,119 @@
+find the nthlargest element from the array(not optimized way to find the nthlargest element from the array)
+----------------------------------------------------------
+function nthlargest(array,n){
+    const sorted=array.sort((a,b)=>(b-a))
+    for(let i=0;i<sorted.length;i++){
+        if(i==n){
+            return sorted[i-1]
+        }
+    }
+}
+console.log("fourth largest elements from the array",nthlargest([5,6,3,2,12],4))
+
+
+
+Given an integer array nums, return the third distinct maximum number in this array.
+If the third maximum does not exist, return the maximum number.
+--------------------------------------------------------------------------------------------
+ var thirdMax = function (nums) 
+ {
+ 
+        let sort = nums.sort((a, b) => b - a)
+        console.log(sort,"sorted")
+        let arr = []
+        let k = 0
+        for (let i = 0; i < nums.length; i++) {
+            if (arr.indexOf(sort[i]) == -1 && sort[i] != undefined) {
+                console.log("this")
+                arr.push(sort[i])
+                console.log(arr,"pushed...")
+                k++
+            }
+            if (k == 3)  break
+        }
+        if (arr.length == 1 || arr.length == 2) return arr[0]
+        return arr[arr.length - 1]
+    };
+    
+    console.log(thirdMax([1,2,3]))
+
+
+
+Given an integer array nums containing distinct positive integers, 
+find and return any number from the array that is neither the minimum nor the maximum value in the array, 
+or -1 if there is no such number.
+
+Return the selected integer.
+-----------------------------------------------------------------------------------------------------------------------
+var findNonMinOrMax = function(nums) {
+    if (nums.length < 3) {
+        return -1; // There are less than three distinct elements, no valid answer.
+    }
+
+    const sorted = [...nums].sort((a, b) => a - b);
+    const min = sorted[0];
+    const max = sorted[sorted.length - 1];
+
+    for (let i = 1; i < sorted.length - 1; i++) {
+        if (sorted[i] !== min && sorted[i] !== max) {
+            return sorted[i];
+        }
+    }
+
+    return -1; // All elements are either the minimum or the maximum.
+};
+
+console.log(findNonMinOrMax([3, 2, 1, 4])); // Output: 2
+console.log(findNonMinOrMax([1, 2]));        // Output: -1
+
+Given the array of integers nums, you will choose two different indices i and j of that array. 
+Return the maximum value of (nums[i]-1)*(nums[j]-1)
+----------------------------------------------------------------------------------------------------------
+
+
+var maxProduct = function(nums) {
+     let product
+    if(nums.length==2){
+        product=(nums[0]-1)*(nums[1]-1)
+        
+        
+        
+    }
+   
+    const sorted=nums.sort((a,b)=>b-a)
+    const max1=sorted[0]
+    const max2=sorted[1]
+    for(let i=1;i<sorted.length-1;i++){
+        product=(max1-1)*(max2-1)
+    }
+    return product
+    
+};
+You are given an integer array nums. Let product be the product of all values in the array nums.
+
+Return signFunc(product).
+-------------------------------------------------------------------------------------------------------------------
+
+var arraySign = function(nums) {
+    let hasZero = false;
+
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] === 0) {
+            hasZero = true;
+            break;
+        }
+    }
+
+    if (hasZero) {
+        return 0;
+    }
+    const product = nums.reduce((acc, num) => acc * num, 1);
+    console.log(product)
+    return product > 0 ? 1 : -1;
+};
+
+// Example usage:
+console.log(arraySign([-1, -2, -3, -4, 3, 2, 1]));  // Output: 1
+console.log(arraySign([1, 5, 0, 2, -3]));          // Output: 0
+console.log(arraySign([-1, 1, -1, 1, -1]));    
+

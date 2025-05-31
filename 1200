@@ -1,0 +1,25 @@
+ /**
+ * @param {number[]} arr
+ * @return {number[][]}
+ */
+var minimumAbsDifference = function(arr) {
+    arr.sort((a, b) => a - b); // Sort the array in ascending order
+    let minDiff = Infinity;
+    const result = [];
+
+    for (let i = 1; i < arr.length; i++) {
+        const diff = arr[i] - arr[i - 1];
+        if (diff < minDiff) {
+            minDiff = diff;
+        }
+    }
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] - arr[i - 1] === minDiff) {
+            result.push([arr[i - 1], arr[i]]);
+        }
+    }
+    return result;
+    
+    
+};
+console.log(minimumAbsDifference([4,2,1,3]))

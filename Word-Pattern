@@ -1,0 +1,23 @@
+var wordPattern = function(pattern, s) {
+    const words = s.split(' ');
+
+    if (pattern.length !== words.length) return false;
+
+    const map = {};
+
+    for (let i = 0; i < pattern.length; i++) {
+        const char = pattern[i];
+        const word = words[i];
+
+        if (!(char in map)) {
+            if (Object.values(map).includes(word)) return false;
+            map[char] = word;
+        } else {
+            if (map[char] !== word) return false;
+        }
+
+        if (Object.keys(map).filter(key => map[key] === word).length > 1) return false;
+    }
+
+    return true;
+};
