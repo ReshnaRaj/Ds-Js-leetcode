@@ -12,12 +12,10 @@ function findMaxCounts(array) {
 
   return {
     positiveCount,
-    negativeCount
+    negativeCount,
   };
 }
-
-// Example usage:
 const numbers = [3, -2, 0, -5, 7, 1, -8, 4, -9, 2];
 const maxCounts = findMaxCounts(numbers);
 
-console.log(maxCounts); // Output: { positiveCount: 5, negativeCount: 5 }
+console.log(maxCounts);

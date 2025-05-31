@@ -9,6 +9,6 @@ const removeDuplicates = function(nums) {
       }
       return i + 1;
     };
-    const nums = [1, 1, 2,3, 4,5, 5, 6];
+    const nums = [1, 1, 2,3, 4,5, 5, 6,12,34,52];
     console.log(removeDuplicates(nums)); // Output: 6
     // console.log(nums);
