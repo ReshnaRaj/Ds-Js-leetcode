@@ -27,6 +27,6 @@ function factorial(number) {
   }
   
    
-  const result = factorial(6);
+  // const result = factorial(6);
   console.log(result);
   

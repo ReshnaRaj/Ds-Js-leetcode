@@ -5,4 +5,4 @@ function mergeArray(array,array1){
     return  array.filter((num)=>num%5==0)
 }
 console.log(mergeArray([3,4,5,6,7],[67,15,3,2]))
-this code is merging two array and returning the multipls of 5 (*  *)
+// this code is merging two array and returning the multipls of 5 (*  *)

@@ -15,7 +15,7 @@ for (let i = 1; i <= number; i++) {
 
  // function...
  
-let n1 = 0, n2 = 1, nextTerm;
+// let n1 = 0, n2 = 1, nextTerm;
 
 console.log('Fibonacci Series:');
 function fib(number){

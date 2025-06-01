@@ -29,7 +29,7 @@ console.log(rearrangedArray);
 
 
 // Normal  method
---------------------------
+// --------------------------
   var resultArray = [];
 var length = array.length;
 

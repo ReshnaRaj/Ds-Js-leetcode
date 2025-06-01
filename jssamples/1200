@@ -1,9 +1,6 @@
- /**
- * @param {number[]} arr
- * @return {number[][]}
- */
+ 
 var minimumAbsDifference = function(arr) {
-    arr.sort((a, b) => a - b); // Sort the array in ascending order
+    arr.sort((a, b) => a - b); 
     let minDiff = Infinity;
     const result = [];
 
