@@ -1,23 +1,23 @@
-find the duplicate array elements 
--------------------------------------------
-const array=[1,2,3,4,5,1,2,3]
-for(let i=0;i<array.length;i++){
+// find the duplicate array elements 
+// -------------------------------------------
+const array1=[1,2,3,4,5,1,2,3]
+for(let i=0;i<array1.length;i++){
     let count=0
-    for(let j=i+1;j<array.length;j++){
-        if(array[i]===array[j]){
-            array[j]=null
+    for(let j=i+1;j<array1.length;j++){
+        if(array1[i]===array1[j]){
+            array1[j]=null
             count++
           
         }
     }
-        if(count>=1 && array[i] !== null){
-        console.log(array[i])
+        if(count>=1 && array1[i] !== null){
+        console.log(array1[i])
         }
     
 }
 
-find the unique array elements
-----------------------------------------
+// find the unique array elements
+// ----------------------------------------
  const array=[1,2,3,4,5,1,2,3]
 for(let i=0;i<array.length;i++){
     let count=0
