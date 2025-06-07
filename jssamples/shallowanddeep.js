@@ -1,10 +1,10 @@
 // deep copy
-const a=5
-let b=a
-b=6
-console.log(a)
+const aa=5
+let bb=aa
+bb=6
+console.log(aa)
 // 5
-console.log(b)
+console.log(bb)
 // 6
 
 // shallow copy
