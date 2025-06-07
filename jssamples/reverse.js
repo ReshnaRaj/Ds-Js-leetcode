@@ -1,4 +1,4 @@
-finding a reverse of a number
+// finding a reverse of a number
 let num = 123;
 let rev = 0;
 
